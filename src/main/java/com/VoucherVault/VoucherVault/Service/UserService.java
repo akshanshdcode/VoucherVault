@@ -47,12 +47,9 @@ public class UserService {
         }
 
         List<String> cart = user.getCart();
-        if (!cart.contains(productId)) {
-            cart.add(productId);
-            userRepository.save(user);
-            return "Product added to cart successfully";
-        }
-        return "Product is already in the cart";
+        cart.add(productId);
+        userRepository.save(user);
+        return "Product added to cart successfully";
     }
 
     public String removeFromCart(User user, String productId){
