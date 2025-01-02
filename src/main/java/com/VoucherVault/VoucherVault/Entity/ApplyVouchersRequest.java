@@ -7,6 +7,6 @@ import java.util.List;
 
 @Setter
 @Getter
-public class ApplyVoucherRequest {
+public class ApplyVouchersRequest {
     private List<String> voucherIds;
 }
