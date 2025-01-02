@@ -14,44 +14,164 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
 
 **POST** /api/authenticate - Login a user.
 
+   ```sh
+   {
+  "username": "string",
+  "password": "string"
+  }
+  ```
+
 ### Product Management
 
-POST /api/product - Create a new product.
+**POST** /api/product - Create a new product.
 
-GET /api/product/all - Retrieve all products.
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
 
-POST /api/product/id - Retrieve product details by ID.
+**GET** /api/product/all - Retrieve all products.
 
-PUT /api/product - Update product details.
+**POST** /api/product/id - Retrieve product details by ID.
 
-DELETE /api/product - Delete a product.
+   ```sh
+   {
+  "id": "string"
+  }
+  ```
 
-GET /api/product/category/{category} - Retrieve products by category.
+**PUT** /api/product - Update product details.
 
-User Management
+```sh
+   {
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
 
-POST /api/user/create-user - Create a new user.
+**DELETE** /api/product - Delete a product.
 
-GET /api/user - Get user details by username.
+```sh
+   {
+  "id": "string"
+  }
+  ```
 
-GET /api/user/vouchers - Get vouchers assigned to a user.
+**GET** /api/product/category/{category} - Retrieve products by category.
 
-POST /api/user/cart/add - Add a product to the user cart.
+### User Management
 
-POST /api/user/cart/remove - Remove a product from the user cart.
+**POST** /api/user/create-user - Create a new user.
 
-GET /api/user/cart - Retrieve products in the user cart.
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
 
-POST /api/user/cart/apply-vouchers - Apply vouchers to the cart.
+**GET** /api/user - Get user details by username.
 
-Voucher Management
+**GET** /api/user/vouchers - Get vouchers assigned to a user.
 
-POST /api/voucher/create - Create a new voucher.
+**POST** /api/user/cart/add - Add a product to the user cart.
 
-GET /api/voucher/all - Retrieve all vouchers.
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
 
-POST /api/voucher/id - Retrieve voucher details by ID.
+**POST** /api/user/cart/remove - Remove a product from the user cart.
 
-PUT /api/voucher - Update voucher details.
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
 
-DELETE /api/voucher - Delete a voucher.
+**GET** /api/user/cart - Retrieve products in the user cart.
+
+**POST** /api/user/cart/apply-vouchers - Apply vouchers to the cart.
+
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
+
+### Voucher Management
+
+**POST** /api/voucher/create - Create a new voucher.
+
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
+
+**GET** /api/voucher/all - Retrieve all vouchers.
+
+**POST** /api/voucher/id - Retrieve voucher details by ID.
+
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
+
+**PUT** /api/voucher - Update voucher details.
+
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
+
+**DELETE** /api/voucher - Delete a voucher.
+
+   ```sh
+   {
+  "name": "string",
+  "description": "string",
+  "price": 0.0,
+  "category": "string",
+  "stock": 0
+  }
+  ```
