@@ -31,7 +31,6 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
   "description": "string",
   "price": 0.0,
   "category": "string",
-  "stock": 0
   }
   ```
 
@@ -54,7 +53,6 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
   "description": "string",
   "price": 0.0,
   "category": "string",
-  "stock": 0
   }
   ```
 
@@ -74,12 +72,11 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
-  "category": "string",
-  "stock": 0
-  }
+  "username": "string",
+  "email": "string",
+  "password": "string",
+  "role": "string"
+   }
   ```
 
 **GET** /api/user - Get user details by username.
@@ -90,24 +87,16 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
-  "category": "string",
-  "stock": 0
-  }
+  "id": "string"
+   }
   ```
 
 **POST** /api/user/cart/remove - Remove a product from the user cart.
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
-  "category": "string",
-  "stock": 0
-  }
+  "id": "string"
+   }
   ```
 
 **GET** /api/user/cart - Retrieve products in the user cart.
@@ -116,12 +105,8 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
-  "category": "string",
-  "stock": 0
-  }
+  "voucherIds": ["string"]
+   }
   ```
 
 ### Voucher Management
@@ -130,12 +115,15 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
+  "code": "string",
   "category": "string",
-  "stock": 0
-  }
+  "discountType": "string",
+  "discountValue": 0.0,
+  "minimumOrderValue": 0.0,
+  "validFrom": "YYYY-MM-DDTHH:mm:ss",
+  "validTo": "YYYY-MM-DDTHH:mm:ss",
+  "emails": ["string"]
+   }
   ```
 
 **GET** /api/voucher/all - Retrieve all vouchers.
@@ -143,35 +131,31 @@ VoucherVault API Base URL : https://vouchervault-6do6.onrender.com
 **POST** /api/voucher/id - Retrieve voucher details by ID.
 
    ```sh
-   {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
-  "category": "string",
-  "stock": 0
-  }
+  {
+  "id": "string"
+   }
   ```
 
 **PUT** /api/voucher - Update voucher details.
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
+  "id": "string",
+  "code": "string",
   "category": "string",
-  "stock": 0
-  }
+  "discountType": "string",
+  "discountValue": 0.0,
+  "minimumOrderValue": 0.0,
+  "validFrom": "YYYY-MM-DDTHH:mm:ss",
+  "validTo": "YYYY-MM-DDTHH:mm:ss",
+  "emails": ["string"]
+   }
   ```
 
 **DELETE** /api/voucher - Delete a voucher.
 
    ```sh
    {
-  "name": "string",
-  "description": "string",
-  "price": 0.0,
-  "category": "string",
-  "stock": 0
-  }
+  "id": "string"
+   }
   ```
